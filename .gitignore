@@ -1,34 +1,47 @@
-# Ignorar arquivos compilados em Python
+# Arquivos compilados em Python
 *.pyc
 *.pyo
 *.pyd
 __pycache__/
+.mypy_cache/
+.pytest_cache/
 
-# Ignorar virtual environments
+# Cobertura de testes
+htmlcov/
+.coverage
+coverage.xml
+
+# Ambientes virtuais
 env/
-.env
+.venv/
 venv/
-.venv
+.env
 
-# Ignorar logs
+# Arquivos de log
 *.log
 
-# Ignorar banco de dados
+# Banco de dados local
 *.sqlite3
 
-# Ignorar arquivos de configuração do IDE
-.vscode/
-.idea/
-
-# Ignorar arquivos temporários do sistema
-.DS_Store
-Thumbs.db
-
-# Ignorar arquivos de pacotes
+# Arquivos de pacotes Python
 *.egg-info/
+*.whl
+MANIFEST
 dist/
 build/
 
-# Ignorar o script formatador_codigo.py
+# Arquivos de dependência
+Pipfile.lock
+poetry.lock
+
+# Configurações de IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Scripts que você quer ignorar
 formatador_codigo.py
 clear_code.py
