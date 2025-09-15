@@ -1,6 +1,5 @@
 import streamlit as st
 
-from components.feedback import render_feedback
 from components.header import render_header
 from components.sidebar import render_sidebar
 from config.prompts_sytem import SYSTEM_PROMPT
@@ -32,4 +31,3 @@ if user_prompt := st.chat_input("Qual sua dúvida sobre Python?"):
             response = get_groq_response(user_prompt, SYSTEM_PROMPT)
             st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
-            render_feedback(user_prompt, response)
