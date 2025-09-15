@@ -3,6 +3,7 @@
 import httpx
 import streamlit as st
 from groq import Groq
+from groq._exceptions import AuthenticationError
 
 
 def get_groq_response(
@@ -54,6 +55,12 @@ def get_groq_response(
         )
 
         return chat_completion.choices[0].message.content
+
+    except AuthenticationError:
+        st.error(
+            "**API Key inválida.** Verifique se a chave inserida está correta e ainda válida."
+        )
+        return None
 
     except httpx.ConnectError as ce:
         st.error(f"Erro de conexão com a API Groq: {type(ce).__name__} - {str(ce)}")
