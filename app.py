@@ -1,4 +1,10 @@
+"""Aplicação principal do AI Coder: assistente inteligente para análise e aprimoramento de código
+Python via Streamlit."""
+
+import os
+
 import streamlit as st
+from dotenv import load_dotenv
 
 from components.header import render_header
 from components.sidebar import render_sidebar
@@ -8,7 +14,13 @@ from utils.session import init_session, render_chat_history
 
 st.set_page_config(page_title="AI Coder", page_icon="🤖", layout="wide")
 
+load_dotenv()
+
 api_key = render_sidebar()
+
+if not api_key:
+    api_key = os.getenv("GROQ_API_KEY")
+
 render_header()
 init_session()
 render_chat_history()
