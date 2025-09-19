@@ -1,0 +1,47 @@
+# Arquivos compilados em Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+
+# Cobertura de testes
+htmlcov/
+.coverage
+coverage.xml
+
+# Ambientes virtuais
+env/
+.venv/
+venv/
+.env
+
+# Arquivos de log
+*.log
+
+# Banco de dados local
+*.sqlite3
+
+# Arquivos de pacotes Python
+*.egg-info/
+*.whl
+MANIFEST
+dist/
+build/
+
+# Arquivos de dependência
+Pipfile.lock
+poetry.lock
+
+# Configurações de IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Scripts que você quer ignorar
+formatador_codigo.py
+clear_code.py
