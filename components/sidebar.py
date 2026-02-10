@@ -13,7 +13,9 @@ def render_sidebar():
     st.sidebar.info(
         "👤 Desenvolvido por [Thiago Rabello](https://br.linkedin.com/in/thiago-rabelloo) "
     )
-    st.sidebar.markdown("📚 Documentação: [GitHub](https://github.com/thirabelloo/ai-coder/blob/main/docs/guia_de_utilizacao.md)")
+    st.sidebar.markdown(
+        "📚 Documentação: [GitHub](https://github.com/thirabelloo/ai-coder/blob/main/docs/guia_de_utilizacao.md)"
+    )
 
     st.sidebar.markdown("🔑 Obtenha uma chave em  [Groq](https://console.groq.com/)")
     st.sidebar.markdown("---")
