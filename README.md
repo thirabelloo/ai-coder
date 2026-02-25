@@ -54,7 +54,6 @@ ai-coder/
 │   └── guia_de_utilizacao.md
 ├── services/               # Integração com APIs externas (Groq)
 ├── utils/                  # Utilitários e funções auxiliares
-├── .env                    # Chave da API Groq (não versionar)
 ├── requirements.txt        # Dependências do projeto
 └── README.md               # Documentação do projeto
 ```
